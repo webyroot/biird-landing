@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Manrope', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@layer utilities {
+    .font-serif {
+        font-family: 'Cormorant Garamond', serif;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply px-6 py-3 bg-biird-primary text-white font-semibold rounded-lg
+               hover:bg-biird-secondary transition-colors duration-300
+               focus:outline-none focus:ring-2 focus:ring-biird-secondary focus:ring-offset-2;
+    }
+
+    .btn-secondary {
+        @apply px-6 py-3 bg-white text-biird-primary font-semibold rounded-lg
+               border-2 border-biird-primary
+               hover:bg-biird-light transition-colors duration-300;
+    }
+
+    .section-padding {
+        @apply px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
+    }
+
+    .container-width {
+        @apply max-w-7xl mx-auto;
+    }
+
+    .gradient-text {
+        @apply bg-gradient-to-r from-biird-primary to-biird-secondary bg-clip-text text-transparent;
+    }
+
+    .card-shadow {
+        @apply shadow-lg shadow-purple-100/50 hover:shadow-xl hover:shadow-purple-200/50
+               transition-shadow duration-300;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
